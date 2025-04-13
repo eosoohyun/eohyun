@@ -76,13 +76,13 @@
     }
 
     .comment-wrapper {
-  background-color: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  padding: 30px;
-  max-width: 800px;
-}
-
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      padding: 30px;
+      max-width: 800px;
+      width: 100%;
+    }
   </style>
 </head>
 
@@ -107,25 +107,20 @@
     </div>
   </div>
 
-  <!-- ✅ 예쁘게 감싼 댓글 박스 -->
-  <div class="comment-wrapper">
-    <!-- ✅ 댓글을 감싸는 박스 -->
-<div class="comment-wrapper" id="comment-box"></div>
+  <!-- ✅ 댓글 박스 -->
+  <div class="comment-wrapper" id="comment-box"></div>
 
-<!-- ✅ 댓글 iframe을 동적으로 삽입하는 스크립트 -->
-<script>
-  const commentDiv = document.getElementById('comment-box');
-  const script = document.createElement('script');
-  script.src = 'https://utteranc.es/client.js';
-  script.setAttribute('repo', 'eosoohyun/eohyun');
-  script.setAttribute('issue-term', 'pathname');
-  script.setAttribute('theme', 'github-light');
-  script.setAttribute('crossorigin', 'anonymous');
-  script.async = true;
-  commentDiv.appendChild(script);
-</script>
-
-  </div>
-
+  <!-- ✅ Utterances 스크립트 -->
+  <script>
+    const commentDiv = document.getElementById('comment-box');
+    const script = document.createElement('script');
+    script.src = 'https://utteranc.es/client.js';
+    script.setAttribute('repo', 'eosoohyun/eohyun');
+    script.setAttribute('issue-term', 'pathname');
+    script.setAttribute('theme', 'github-light');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
+    commentDiv.appendChild(script);
+  </script>
 </body>
 </html>
