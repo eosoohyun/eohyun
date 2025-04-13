@@ -38,21 +38,22 @@
     }
 
 .info {
+  width: 350px;
+  height: 300px;
+  padding: 0;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: left;
-  width: 350px;
-  height: 300px;
   overflow: hidden;
+  position: relative; /* 기준점 */
 }
 
 .scrollbox {
   height: 100%;
-  width: 100%; /* 전체 너비 사용 */
-  padding: 0 16px; /* 위아래 0, 좌우만 여백 */
+  width: calc(100% + 15px); /* 스크롤바 너비만큼 확장 */
   overflow-y: scroll;
-  box-sizing: border-box;
+  padding: 0 16px;
+  box-sizing: content-box; /* padding이 width에 포함되지 않게 */
 }
 
     .scrollbox::-webkit-scrollbar {
