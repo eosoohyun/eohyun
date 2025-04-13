@@ -49,8 +49,9 @@
 
 .scrollbox {
   height: 100%;
+  width: calc(100% - 10px);  /* 좌우 여백을 고려해 너비 줄이기 */
   overflow-y: auto;
-  padding: 0 20px; /* 위아래 0, 좌우는 20px */
+  padding: 0 20px;            /* 위아래 0, 좌우만 20px */
   box-sizing: border-box;
 }
 
