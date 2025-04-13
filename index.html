@@ -44,13 +44,14 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: left;
       width: 350px;
-      height: 300px; /* 원하는 고정 높이 */
-      overflow: hidden; /* 넘치는 내용은 숨기기 */
+      height: 300px; /* info 높이 고정 */
+      display: flex;
+      flex-direction: column;
     }
 
     .scrollbox {
-      max-height: 350px;
-      overflow-y: scroll;
+      flex-grow: 1;
+      overflow-y: auto;
       padding-right: 20px;
       margin-right: -40px;
     }
@@ -112,7 +113,7 @@
   <!-- ✅ 댓글 박스 -->
   <div class="comment-wrapper" id="comment-box"></div>
 
-  <!-- ✅ Utterances 스크립트 -->
+  <!-- ✅ Utterances 댓글 스크립트 -->
   <script>
     const commentDiv = document.getElementById('comment-box');
     const script = document.createElement('script');
