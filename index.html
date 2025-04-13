@@ -75,25 +75,23 @@
       color: #333;
     }
 
- .comment-wrapper {
-  margin-top: 40px;
-  padding: 30px;
-  border-radius: 20px;
-  background-color: white;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  max-width: 800px;
-  width: 100%;
-  transition: all 0.3s ease-in-out;
-}
+    .comment-wrapper {
+      margin-top: 40px;
+      padding: 30px;
+      border-radius: 20px;
+      background-color: white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      max-width: 800px;
+      width: 100%;
+      transition: all 0.3s ease-in-out;
+    }
 
-/* 반응형 정렬 */
-@media (max-width: 768px) {
-  .comment-wrapper {
-    padding: 20px;
-    margin: 20px;
-  }
-}
-
+    @media (max-width: 768px) {
+      .comment-wrapper {
+        padding: 20px;
+        margin: 20px;
+      }
+    }
   </style>
 </head>
 
@@ -118,14 +116,16 @@
     </div>
   </div>
 
-  <!-- ✅ 댓글 영역 -->
-<script src="https://utteranc.es/client.js"
-        repo="eosoohyun/eohyun"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+  <!-- ✅ 예쁘게 감싼 댓글 박스 -->
+  <div class="comment-wrapper">
+    <script src="https://utteranc.es/client.js"
+            repo="eosoohyun/eohyun"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
 
 </body>
 </html>
