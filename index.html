@@ -49,30 +49,31 @@
 }
 
 .scrollbox {
-  height: 100%;
-  width: calc(100% + 15px); /* 스크롤바 너비만큼 확장 */
+  max-height: 250px;
   overflow-y: scroll;
-  padding: 0 16px;
-  box-sizing: content-box; /* padding이 width에 포함되지 않게 */
+
+  padding: 0 20px;       /* 위아래는 0, 좌우만 여백 */
+  margin-right: -40px;   /* 스크롤 바 살짝 밖으로 */
+
+  /* 스크롤 디자인 */
+  scrollbar-width: thin;
+  scrollbar-color: #f8b500 #F0E68C;
 }
 
-    .scrollbox::-webkit-scrollbar {
-      width: 15px;
-    }
-
-    .scrollbox::-webkit-scrollbar-track {
-      background: #F0E68C;
-      border-radius: 10px;
-    }
-
-    .scrollbox::-webkit-scrollbar-thumb {
-      background: linear-gradient(180deg, #f2e426, #f8b500);
-      border-radius: 10px;
-    }
-
-    .scrollbox::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(180deg, #f8b500, #e09c00);
-    }
+.scrollbox::-webkit-scrollbar {
+  width: 15px;
+}
+.scrollbox::-webkit-scrollbar-track {
+  background: #F0E68C;
+  border-radius: 10px;
+}
+.scrollbox::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f2e426, #f8b500);
+  border-radius: 10px;
+}
+.scrollbox::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #f8b500, #e09c00);
+}
 
     h1 {
       color: #333;
