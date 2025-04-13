@@ -37,24 +37,22 @@
       border-radius: 50%;
     }
 
-    .info {
-      background-color: white;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: left;
-      width: 350px;
-      height: 300px; /* info 높이 고정 */
-      display: flex;
-      flex-direction: column;
-    }
+.info {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  width: 350px;
+  height: 300px;
+  overflow: hidden;
+}
 
-    .scrollbox {
-      flex-grow: 1;
-      overflow-y: auto;
-      padding-right: 20px;
-      margin-right: -40px;
-    }
+.scrollbox {
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
     .scrollbox::-webkit-scrollbar {
       width: 15px;
